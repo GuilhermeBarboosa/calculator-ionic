@@ -42,6 +42,13 @@ export class HomePage {
       } else if (this.lastOperator == '/') {
         this.value = '' + (parseInt(this.oldValue) / parseInt(this.value));
       }
+
+      if(parseInt(this.value) >= 0 ){
+        document.getElementById("value").style.color = "green";
+      }else{
+        document.getElementById("value").style.color = "red";
+      }
+      
     }
     else {
       this.newInput = true;
