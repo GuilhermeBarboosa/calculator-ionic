@@ -8,15 +8,17 @@
 
 <ion-content [fullscreen]="true" padding>
 
-  
-  <!-- <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div> -->
+    <ion-label class="value">
+      {{value}}
+    </ion-label>
+
+  </ion-item>
+
+  <div *ngFor="let numGroup of numbersGroup">
+
+    <ion-button class="calc-button" *ngFor="let num of numGroup" (click)="onButtonPress(num)">{{num}}</ion-button>
+  </div>
+
 </ion-content>
